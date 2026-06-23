@@ -1,0 +1,247 @@
+:root {
+  --ink: #24313f;
+  --muted: #6a7785;
+  --line: #d9e4ec;
+  --paper: #fffdf7;
+  --mint: #d8f3dc;
+  --sky: #cde7ff;
+  --gold: #ffe08a;
+  --coral: #ffb4a2;
+  --green: #2f9e44;
+  --blue: #2672c9;
+  --red: #d9480f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--ink);
+  font-family: "Trebuchet MS", "Microsoft YaHei", sans-serif;
+  background:
+    linear-gradient(135deg, rgba(216, 243, 220, .95), rgba(205, 231, 255, .92)),
+    repeating-linear-gradient(45deg, transparent 0 18px, rgba(255,255,255,.35) 18px 20px);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.login-page {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  padding: 24px;
+}
+
+.login-box {
+  width: min(430px, 100%);
+  padding: 30px;
+  border: 2px solid var(--ink);
+  border-radius: 8px;
+  background: var(--paper);
+  box-shadow: 8px 8px 0 rgba(36, 49, 63, .2);
+}
+
+.login-title {
+  margin: 0 0 10px;
+  font-size: 30px;
+}
+
+.login-subtitle {
+  margin: 0 0 24px;
+  color: var(--muted);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  min-height: 100vh;
+}
+
+.sidebar {
+  padding: 18px;
+  border-right: 2px solid var(--ink);
+  background: rgba(255, 253, 247, .92);
+}
+
+.brand {
+  margin-bottom: 18px;
+  padding: 12px;
+  border: 2px solid var(--ink);
+  border-radius: 8px;
+  background: var(--gold);
+  font-weight: 800;
+}
+
+.menu a {
+  display: block;
+  margin: 8px 0;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #fff;
+}
+
+.menu a:hover,
+.menu a.active {
+  border-color: var(--ink);
+  background: var(--mint);
+}
+
+.main {
+  padding: 22px;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+  padding: 16px;
+  border: 2px solid var(--ink);
+  border-radius: 8px;
+  background: rgba(255, 253, 247, .95);
+}
+
+.topbar h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.panel {
+  margin-bottom: 18px;
+  padding: 16px;
+  border: 2px solid var(--ink);
+  border-radius: 8px;
+  background: rgba(255, 253, 247, .94);
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 12px;
+}
+
+.stat {
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.stat strong {
+  display: block;
+  margin-top: 6px;
+  font-size: 26px;
+}
+
+input,
+select,
+textarea,
+button {
+  font: inherit;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  min-height: 38px;
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #fff;
+}
+
+.toolbar input,
+.toolbar select {
+  width: 180px;
+}
+
+button {
+  min-height: 38px;
+  padding: 8px 12px;
+  border: 2px solid var(--ink);
+  border-radius: 6px;
+  background: var(--sky);
+  color: var(--ink);
+  cursor: pointer;
+  font-weight: 700;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+button.danger {
+  background: var(--coral);
+}
+
+button.success {
+  background: var(--mint);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+th,
+td {
+  padding: 10px;
+  border: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  background: #f1f8ff;
+}
+
+.badge {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: var(--gold);
+  font-size: 12px;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+@media (max-width: 800px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    border-right: none;
+    border-bottom: 2px solid var(--ink);
+  }
+
+  .toolbar input,
+  .toolbar select {
+    width: 100%;
+  }
+
+  .topbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+*.db
+*.sqlite3
+
+# Flask
+instance/
+.webassets-cache
+.flaskenv
+
+# 环境变量配置文件（重要：不要提交真实配置）
+.env
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# 操作系统
+.DS_Store
+Thumbs.db
+
+# 日志文件
+*.log
+
+# 上传文件
+static/uploads/*
+!static/uploads/.gitkeep
+
+# 临时文件
+*.tmp
+*.bak
+*.backup
